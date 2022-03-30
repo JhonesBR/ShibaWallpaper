@@ -11,7 +11,7 @@ Use the setup, by the first time you open the app it will be set to initiate wit
 
 | Download Setup |
 | :------------: |
-| <h3><a href="https://github.com/JhonesBR/ShibaWallpaper/Setup/Release/ShibaWallpaperSetup.msi">⬇️ Download [msi]</a></h3> | 
+| <h3><a href="https://github.com/JhonesBR/ShibaWallpaper/blob/main/Setup/Release/ShibaWallpaperSetup.msi">⬇️ Download [msi]</a></h3> | 
 </div>
 
 ## Usage
