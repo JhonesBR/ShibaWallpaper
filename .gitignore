@@ -1,0 +1,6 @@
+.git
+.vs
+Setup/Debug/
+ShibaWallpaper/bin/Debug/
+ShibaWallpaper/obj/Debug/
+*.user
