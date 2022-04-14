@@ -1,7 +1,9 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +40,7 @@ namespace TrayAPI
 
             _notifyIcon.DoubleClick += (s, args) =>
             {
-                MessageBox.Show(GetImageUrlFromShibeApi(1));
+                MessageBox.Show("© João Vitor Oliveira de Melo. All rights reserved.", "Copyright and credits");
             };
             
             InitializeComponent();
@@ -138,10 +140,10 @@ namespace TrayAPI
         public void InitOnWindowsStart()
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            rk.SetValue("ShibaWallpaper", System.Reflection.Assembly.GetExecutingAssembly().Location);
+            rk.SetValue("ShibaWallpaper", System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "ShibaWallpaper.exe"));
         }
-        
-        private void Window_Closed(object sender, EventArgs e)
+
+    private void Window_Closed(object sender, EventArgs e)
         {
             _notifyIcon.Visible = false;
             _notifyIcon.Dispose();
